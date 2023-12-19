@@ -9,8 +9,8 @@
 #include "types.h"
 
 Poll::Poll(void) :
-   _handle_count(0),
-   _start_time(0)
+   _start_time(0),
+   _handle_count(0)
 {
    /*
     * Create a dummy handle to simplify things.

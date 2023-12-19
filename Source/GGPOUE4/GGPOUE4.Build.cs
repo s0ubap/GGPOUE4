@@ -26,7 +26,12 @@ public class GGPOUE4 : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { "CoreUObject", "Engine", "InputCore" });
 
 
-		if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTargetPlatform.Win32)
+		if (Target.Platform == UnrealTargetPlatform.Win64)
+		{
+			PublicDefinitions.Add("_WINDOWS");
+		}
+
+		/*if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTargetPlatform.Win32)
 		{
 			PublicDefinitions.Add("_WINDOWS");
 		}
@@ -37,7 +42,7 @@ public class GGPOUE4 : ModuleRules
 		else if (Target.Platform == UnrealTargetPlatform.Linux || Target.Platform == UnrealTargetPlatform.LinuxAArch64)
         {
 			PublicDefinitions.Add("__GNUC__");
-		}
+		}*/
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

@@ -9,6 +9,7 @@
 
 #include "CoreMinimal.h"
 #include <stdarg.h>
+#include <functional>
 #include "ggponet.generated.h"
 
 UENUM(BlueprintType)

@@ -16,13 +16,13 @@ Peer2PeerBackend::Peer2PeerBackend(GGPOSessionCallbacks *cb,
                                    uint16 localport,
                                    int num_players,
                                    int input_size) :
-    _num_players(num_players),
-    _input_size(input_size),
-    _sync(_local_connect_status),
-    _disconnect_timeout(DEFAULT_DISCONNECT_TIMEOUT),
-    _disconnect_notify_start(DEFAULT_DISCONNECT_NOTIFY_START),
+    _sync(_local_connect_status), 
     _num_spectators(0),
-    _next_spectator_frame(0)
+    _input_size(input_size),
+    _num_players(num_players),
+    _next_spectator_frame(0),
+    _disconnect_timeout(DEFAULT_DISCONNECT_TIMEOUT),
+    _disconnect_notify_start(DEFAULT_DISCONNECT_NOTIFY_START)
 {
    _callbacks = *cb;
    _synchronizing = true;

@@ -8,8 +8,8 @@
 #include "sync.h"
 
 Sync::Sync(UdpMsg::connect_status *connect_status) :
- _local_connect_status(connect_status),
- _input_queues(NULL)
+ _input_queues(NULL),
+ _local_connect_status(connect_status)
 {
    _framecount = 0;
    _last_confirmed_frame = -1;
